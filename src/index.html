@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Quiz app</title>
+</head>
+<body>
+  <main class="page">
+    <nav class="tabs">
+      <button class="tabs__tab" data-linkto="#home">Home</button>
+      <button class="tabs__tab" data-linkto="#create">Create</button>
+      <button class="tabs__tab" data-linkto="#play">Play</button>
+    </nav>
+    <div class="tabs-content">
+      <div id="home">Home!</div>
+      <div id="create">Create!</div>
+      <div id="play">
+        <div class="questions"></div>
+        <button class="question__btn">Check!</button>
+      </div>
+    </div>
+    <div class="modal-selected">
+      <div class="modal-selected__dialog">
+        Selected! &check;
+      </div>
+    </div>
+    <div class="modal-result hide">
+      <div class="modal-result__dialog">
+        <h3 class="modal-result__title">
+          Вітаємо! Ваш результат: <span id="actualPoints"></span> із <span id="generalPoints"></span>
+        </h3>
+        <!-- <h3 class="modal-result__title">Вітаємо! Ви набрали <span id="actualPoints">2</span> балів із <span id="points">5</span> можливих</h3> -->
+        <button class="modal-result__btn" data-close="true">&times;</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
