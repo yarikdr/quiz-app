@@ -194,10 +194,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
+  padding: 0 10px;
   &__dialog {
     position: relative;
-    width: 350px;
-    padding: 20px;
+    flex: 0 1 350px;
+    padding: 30px 20px;
     background-color: orange;
     border-radius: 20px;
   }
@@ -212,8 +213,8 @@ body {
 
   &__btn {
     position: absolute;
-    top: -38px;
-    right: -19px;
+    top: -11px;
+    right: 8px;
     font-size: 40px;
     line-height: 120%;
     color: #fff;

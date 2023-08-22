@@ -5,7 +5,6 @@ const modal = (modalSel, triggersSel) => {
 
   triggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
-      console.log('ddj')
       modalBlock.classList.remove('hide')
       modalBlock.classList.add('fadeIn')
       document.body.classList.add('lock')
