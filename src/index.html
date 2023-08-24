@@ -17,10 +17,28 @@
     </nav>
     <div class="tabs-content">
       <div id="home">Home!</div>
-      <div id="create">Create!</div>
+      <div id="create">
+        <form class="create">
+          <input type="text" class="create__title" placeholder="Name of the quiz" name="title" required>
+          <input type="text" class="create__description input" placeholder="Description (optional)" name="description">
+          <div class="create__questions">
+            <div class="create__block">
+              <div class="create__question">
+                <input type="text" class="input" placeholder="Question..." name="question">
+                <button type="button" class="addAnswer">Add answer</button>
+              </div>
+              <div class="create__answers">
+                <input type="text" class="create__answer input" placeholder="Answer..." name="answer">
+              </div>
+            </div>
+          </div>
+          <button type="button" class="addQuestion">Add question</button>
+          <button type="submit" class="create__save btn">Save quiz!</button>
+        </form>
+      </div>
       <div id="play">
         <div class="questions"></div>
-        <button class="question__btn">Check!</button>
+        <button class="question__btn btn">Check!</button>
       </div>
     </div>
     <div class="modal-selected">

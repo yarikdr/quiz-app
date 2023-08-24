@@ -14,6 +14,35 @@ body {
   overflow: hidden;
 }
 
+.input {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px 10px 0px;
+  color: #000;
+  font-size: 22px;
+  line-height: 120%;
+  transition: border-color 0.3s ease-out;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  &::placeholder {
+    color: grey;
+  }
+  &:focus {
+    border-bottom: 1px solid darkblue;
+  }
+}
+
+.btn {
+  background-color: orange;
+  padding: 20px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  &:hover {
+    background-color: lighten(orange, 10%);
+  }
+}
+
 .page {
   max-width: 1170px;
   width: 100%;
@@ -156,16 +185,7 @@ body {
   }
   
   &__btn {
-    background-color: orange;
-    padding: 20px;
-    font-size: 30px;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 20px;
     margin-top: 30px;
-    &:hover {
-      background-color: lighten(orange, 10%);
-    }
   }
 }
 
@@ -223,6 +243,91 @@ body {
   }
 }
 
+.create {
+  >*:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px 10px 0px;
+    font-size: 30px;
+    color: #000;
+    border-bottom: 3px solid rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease-out;
+    &::placeholder {
+      color: grey;
+    }
+
+    &:focus {
+      border-bottom: 3px solid darkblue;
+    }
+  }
+
+  // &__description {}
+
+  &__block {
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 20px;
+  }
+
+  &__questions {
+    >*:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__question {
+    position: relative;
+    input {
+      padding-right: 120px;
+      margin-bottom: 20px;
+    }
+    .addAnswer {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      padding: 7px 10px;
+      background-color: rgb(8, 146, 8);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+  }
+
+  &__answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
+    align-content: center;
+    @media (max-width: 425px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // &__answer {}
+
+  .addQuestion {
+    background-color: rgb(15, 70, 234);
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: darken(rgb(15, 70, 234), 10%);
+    }
+  }
+
+  &__save {
+    width: 100%;
+    padding: 15px;
+  }
+}
 
 
 
